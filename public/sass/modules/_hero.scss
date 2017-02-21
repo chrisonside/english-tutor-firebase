@@ -4,7 +4,7 @@
 	padding: 15px 0 0;
 
 	@include media('>=tablet') {
-		background-image: url('../img/bg__hero--desktop.jpg');
+		background-image: url('../../img/bg__hero--desktop.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position-x: right;
@@ -13,7 +13,7 @@
 	}
 
 	@include media('>=desktop') {
-		background-image: url('../img/bg__hero--widescreen.jpg');
+		background-image: url('../../img/bg__hero--widescreen.jpg');
 		height: calc(100vh - 75px);
 		max-height: 700px;
 	}
@@ -29,7 +29,7 @@
     padding: 30px 25px;
     background: $colour-white;
     border-radius: 5px;
-    max-width: 500px;
+    max-width: 520px;
     margin: 0 auto 20px;
     text-align: center;
 
@@ -37,14 +37,16 @@
 		position: relative;
 	    top: 50%;
 	    transform: translateY(-50%);
-	   	width: 48%;
-	    padding: 40px;
+	   	width: 50%;
+	    padding: 30px;
 	    margin: 0 20px;
 	    opacity: 0.9;
 	    max-width: none;
-	    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
+	    filter: drop-shadow(-1px 1px 2px rgba(0, 0, 0, 0.4));
 	}
-
+	@include media('>=780px') {
+		width: 52%;
+	}
 	@include media('>=desktop') {
 		width: 42%;
 		margin: 0 70px;
@@ -64,7 +66,7 @@
 	height: 0;
 	padding-bottom: 100%;
 
-	background-image: url('../img/bg__hero--tablet.jpg');
+	background-image: url('../../img/bg__hero--tablet.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 
@@ -79,7 +81,8 @@
     @include line-height(50);
 	margin-bottom: 10px;
 	color: $colour-black;
-	font-weight: bold;
+	font-family: $font-primary;
+	font-weight: $font-weight-bold;
 
 	@include media('>=400px') {
 		@include font-size(60);
@@ -87,7 +90,7 @@
 	}
 
 	@include media('>=tablet') {
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 	}
 
 	@include media('>=1700px') {
@@ -97,25 +100,37 @@
 }
 
 .hero__sub {
-	@include font-size(30);
-    @include line-height(30);
-	margin-bottom: 20px;
+	@include font-size(22);
+    @include line-height(25);
+	margin-bottom: 10px;
 	color: $colour-navy;
-	font-weight: bold;
+	font-weight: $font-weight-bold;
 
-	@include media('>=400px') {
-		@include font-size(40);
-    	@include line-height(40);
-    	// margin-bottom: 10px;
+	@include media('>=350px') {
+		@include font-size(24);
+    	@include line-height(28);
+    	margin-bottom: 15px;
+	}
+
+	@include media('>=500px') {
+		@include font-size(30);
+    	@include line-height(35);
 	}
 
 	@include media('>=tablet') {
+		@include font-size(26);
+    	@include line-height(30);
 		margin-bottom: 20px;
 	}
 
+	@include media('>=850px') {
+		@include font-size(28);
+    	@include line-height(34);
+	}
+
 	@include media('>=1700px') {
-		@include font-size(40);
-    	@include line-height(40);
+		@include font-size(37);
+    	@include line-height(37);
 	}
 }
 
@@ -124,23 +139,15 @@
     @include line-height(27);
 
     @include media('>=500px') {
-		@include font-size(22);
-    	@include line-height(35);
+		@include font-size(19);
+    	@include line-height(26);
     }
-
+    @include media('>=850px') {
+		@include font-size(21);
+    	@include line-height(29);
+	}
     @include media('>=1500px') {
     	@include font-size(27);
     	@include line-height(35);
     }
 }
-
-// .icn__arrow-down {
-// 	position: absolute;
-// 	bottom: 10px;
-// 	left: 50%;
-// 	margin-left: -30px;
-// 	height: 60px;
-// 	width: 60px;
-// 	stroke: white;
-// 	fill: none;
-// }

@@ -8,12 +8,12 @@
 .about__brief {
 	background-color: $colour-navy;
 	color: $colour-white;
-	padding: 45px 25px 20px;
+	padding: 35px 25px 10px;
 	vertical-align: middle;
     text-align: left;
 
     @include media('>=tablet') {
-        padding: 70px 25px 45px;
+        padding: 50px 25px 25px;
     }
 
 	@include media('>=desktop') {
@@ -68,11 +68,11 @@
 
 .about__bio {
 	background-color: $colour-white;
-	padding: 45px 25px 20px;
+	padding: 35px 25px 25px;
     color: $colour-black;
 
     @include media('>=tablet') {
-        padding: 70px 25px 45px;
+        padding: 50px 25px 25px;
     }
 
     @include media('>=desktop') {

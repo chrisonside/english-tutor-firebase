@@ -18,10 +18,22 @@
 	@include media('>=desktop') {
 		display: inline-block;
 		vertical-align: top;
-		/* Set up squares */
 		width: 50%;
-		height: 0;
-		padding-bottom: 50%;
+		position: relative;
+
+		&--image {
+			/* http://stackoverflow.com/questions/23717953/padding-bottom-top-in-flexbox-layout/28076430 */
+			&:after {
+				content: '';
+			    /* display: block; */
+			    width: 100%;
+			    height: 0;
+			    padding-bottom: 100%;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			}
+		}
 	}
 }
 
@@ -66,18 +78,18 @@
 	}
 
 	@include media('>=tablet') {
-		margin-bottom: $vertical-rhythm;
+		margin-bottom: 30px;
 	}
 
 	@include media('>=desktop', '<1230px') {
 		@include font-size(35);
     	@include line-height(35);
+    	margin-bottom: 35px;
 	}
 
 	@include media('>=1700px') {
 		@include font-size(50);
     	@include line-height(60);
-    	margin-bottom: 35px;
 	}
 }
 
@@ -104,8 +116,8 @@
 	}
 
 	@include media('>=1700px') {
-		@include font-size(24);
-    	@include line-height(32);
+		@include font-size(21);
+    	@include line-height(31);
 	}
 
 	&--extra {
@@ -122,6 +134,12 @@
 	padding-left: 20px;
 	margin-bottom: 40px;
 
+	@include media('>=desktop') {
+		margin-bottom: 30px;
+	}
+	@include media('>=1500px') {
+		margin-bottom: 40px;
+	}
 	@include media('>=1700px') {
 		margin-bottom: 60px;
 	}
@@ -152,8 +170,8 @@
 	}
 
 	@include media('>=1700px') {
-		@include font-size(24);
-    	@include line-height(32);
+		@include font-size(21);
+    	@include line-height(29);
     	margin-bottom: 20px;
 	}
 }
@@ -190,7 +208,7 @@
 	}
 
 	@include media('>=1700px') {
-		@include font-size(31);
+		@include font-size(27);
 		padding: 20px 30px;
 	}
 }

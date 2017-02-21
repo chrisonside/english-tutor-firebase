@@ -3,7 +3,7 @@
     padding: 60px 20px;
 
     @include media('>=500px') {
-        background-image: url('../img/background-form--tablet.jpg');
+        background-image: url('../../img/background-form--tablet.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         padding: 80px 40px;
@@ -14,11 +14,11 @@
     }
 
     @include media('>=desktop') {
-        background-image: url('../img/background-form--large.jpg');
+        background-image: url('../../img/background-form--large.jpg');
     }
 
     @include media('>=1300px') {
-        background-image: url('../img/background-form--widescreen.jpg');
+        background-image: url('../../img/background-form--widescreen.jpg');
     }
 
     @include media('>=1500px') {
@@ -89,8 +89,8 @@
     }
 
     @include media('>=1500px') {
-        @include font-size(23);
-        @include line-height(32);
+        @include font-size(21);
+        @include line-height(31);
         margin: 0 auto 30px;
          
         &:last-of-type {
