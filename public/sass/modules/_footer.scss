@@ -13,7 +13,7 @@
 	@include media('>=1000px') {
 		display: inline-block;
 		vertical-align: top;
-    	width: 33.33333%;
+    	width: 50%;
     	margin-right: -4px;
     	padding-left: 15px;
 	}
@@ -21,22 +21,11 @@
 
 .footer__contact {
 	margin-bottom: 2px;
+	color: $colour-white;
 	@include media('>=1000px') {
 		display: inline-block;
 		vertical-align: top;
-    	width: 33.33333%;
-    	margin-right: -4px;
-    	text-align: center;
-	}
-}
-
-.footer__slogan {
-	margin-bottom: 2px;
-	color: $colour-brightblue;
-	@include media('>=1000px') {
-		display: inline-block;
-		vertical-align: top;
-    	width: 33.33333%;
+    	width: 50%;
     	margin-right: -4px;
     	text-align: right;
     	padding-right: 15px;

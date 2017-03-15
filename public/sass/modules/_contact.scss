@@ -27,7 +27,7 @@
 
     @include media('>=1700px') {
         padding: 300px 80px;
-    }    
+    }
 }
 
 .contact__wrapper {
@@ -38,7 +38,7 @@
             margin: 0 auto;
             padding: 40px 40px 50px;
             background-color: $colour-white;
-            color: $colour-black;
+            color: $colour-real-black;
             border-radius: 10px;
             opacity: 0.85;
         }
@@ -58,11 +58,12 @@
 }
 
 .contact__header {
-    @include font-size(40);
+    @include font-size(45);
     @include line-height(50);
     text-align: center;
     margin-bottom: 20px;
-    font-weight: $font-weight-bold;
+    font-family: $font-title;
+    // font-weight: $font-weight-bold;
 
     @include media('>=1500px') {
         @include font-size(50);
@@ -72,8 +73,8 @@
 }
 
 .contact__intro {
-    @include font-size(21);
-    @include line-height(28);
+    @include font-size(17);
+    @include line-height(24);
     text-align: center;
     max-width: 410px;
     margin: 0 auto 20px;
@@ -84,13 +85,9 @@
         max-width: none;
     }
 
-    &:last-of-type {
-        margin-bottom: 30px;
-    }
-
     @include media('>=1500px') {
-        @include font-size(21);
-        @include line-height(31);
+        // @include font-size(21);
+        // @include line-height(31);
         margin: 0 auto 30px;
          
         &:last-of-type {
@@ -101,7 +98,12 @@
 
 .contact__email-wrapper{
     display: block;
+    margin-top: 35px;
     margin-bottom: 30px;
+}
+
+.contact__phone-wrapper {
+    margin-bottom: 40px;
 }
 
 .contact__email,
@@ -113,7 +115,7 @@
     padding: 5px 20px;
     border-radius: 5px;
     background-color: $colour-white;
-    color: $colour-black;
+    color: $colour-real-black;
 
     @include media('>=500px') {
         background-color: $colour-navy;
@@ -127,6 +129,14 @@
     }
 }
 
+.contact__outro {
+    @include font-size(22);
+    @include line-height(28);
+    font-family: $font-title;
+    // font-weight: $font-weight-bold;
+    color: $colour-orange;
+}
+
 .icn__email,
 .icn__phone {
     display: block;
@@ -135,7 +145,7 @@
     height: 45px;
     margin: 0 auto 5px;
     fill: $colour-white;
-    stroke: $colour-black;
+    stroke: $colour-real-black;
 
     @include media('>=370px') {
         display: inline-block;

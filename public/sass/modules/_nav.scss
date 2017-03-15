@@ -1,6 +1,6 @@
 .nav {
 	background: $colour-black;
-	font-family: $font-title;
+	font-family: $font-primary;
 	padding: $vertical-rhythm 0;
 	text-align: center;
 
@@ -38,5 +38,27 @@
 	&:hover {
 		border-bottom: 2px solid $colour-white;
 	}
+}
+
+.nav__logo-holder {
+    position: absolute;
+    z-index: 40;
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-bottom: 150px solid transparent;
+    border-left: 300px solid #005689;
+}
+
+.nav__icon {
+	fill: none;
+    stroke: white;
+    width: 120px;
+    /* border: 1px solid white; */
+    left: 20px;
+    position: absolute;
+    height: 118px;
+    top: -5px;
+    z-index: 10000;
 }
 

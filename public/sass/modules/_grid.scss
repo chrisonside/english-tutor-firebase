@@ -1,5 +1,6 @@
 .grid {
 	font-size: 0;
+	background-color: #ededed;
 }
 
 .grid__flex-container {
@@ -12,16 +13,18 @@
 .grid__item {
 	@include font-size(16);
 	@include line-height(21);
-	background-color: $colour-white;
+	// background-color: $colour-white;
 
 
 	@include media('>=desktop') {
 		display: inline-block;
 		vertical-align: top;
 		width: 50%;
+		// width: 60%;
 		position: relative;
 
 		&--image {
+			// width: 40%;
 			/* http://stackoverflow.com/questions/23717953/padding-bottom-top-in-flexbox-layout/28076430 */
 			&:after {
 				content: '';
@@ -53,43 +56,49 @@
 	}
 
 	@include media('>=desktop') {
-		padding: 40px 25px 40px 35px;
+		// padding: 40px 25px 40px 35px;
+		padding: 90px 90px 0px;
 	}
 
-	@include media('>=1350px') {
-		padding: 70px 50px 70px 70px;
-	}
+	// @include media('>=1350px') {
+	// 	padding: 70px 50px 70px 70px;
+	// }
 
-	@include media('>=1700px') {
-		padding: 100px;
-	}
+	// @include media('>=1700px') {
+	// 	padding: 100px;
+	// }
 }
 
 .grid__title {
-	@include font-size(35);
-    @include line-height(35);
-	margin-bottom: 25px;
-	color: $colour-black;
-	font-weight: $font-weight-bold;
+	@include font-size(45);
+    @include line-height(45);
+	margin-bottom: 30px;
+	color: $colour-real-black;
+	font-family: $font-title;
+	// font-weight: $font-weight-bold;
 
-	@include media('>=400px') {
-		@include font-size(45);
-    	@include line-height(45);
-	}
+	// @include media('>=400px') {
+	// 	@include font-size(45);
+ //    	@include line-height(45);
+	// }
 
-	@include media('>=tablet') {
-		margin-bottom: 30px;
-	}
+	// @include media('>=tablet') {
+	// 	// margin-bottom: 30px;
+	// }
 
-	@include media('>=desktop', '<1230px') {
-		@include font-size(35);
-    	@include line-height(35);
-    	margin-bottom: 35px;
-	}
+	// @include media('>=desktop', '<1230px') {
+	// 	@include font-size(35);
+ //    	@include line-height(35);
+ //    	// margin-bottom: 35px;
+	// }
 
-	@include media('>=1700px') {
-		@include font-size(50);
-    	@include line-height(60);
+	// @include media('>=1700px') {
+	// 	@include font-size(50);
+ //    	@include line-height(60);
+	// }
+
+	&--group {
+		padding-top: 30px;
 	}
 }
 
@@ -98,27 +107,27 @@
     @include line-height(24);
 	margin-bottom: $vertical-rhythm;
 
-	@include media('>=400px') {
-		@include font-size(19);
-    	@include line-height(27);
-	}
+	// @include media('>=400px') {
+	// 	@include font-size(19);
+ //    	@include line-height(27);
+	// }
 
-	@include media('>=desktop') {
-		@include font-size(18);
-    	@include line-height(24);
-	}
-	@include media('>=1230px') {
-		@include font-size(18);
-	}
-	@include media('>=1500px') {
-		@include font-size(19);
-    	@include line-height(27);
-	}
+	// @include media('>=desktop') {
+	// 	@include font-size(18);
+ //    	@include line-height(24);
+	// }
+	// @include media('>=1230px') {
+	// 	@include font-size(18);
+	// }
+	// @include media('>=1500px') {
+	// 	@include font-size(19);
+ //    	@include line-height(27);
+	// }
 
-	@include media('>=1700px') {
-		@include font-size(21);
-    	@include line-height(31);
-	}
+	// @include media('>=1700px') {
+	// 	@include font-size(21);
+ //    	@include line-height(31);
+	// }
 
 	&--extra {
 		@include media('>=desktop', '<1230px') {
@@ -135,11 +144,11 @@
 	margin-bottom: 40px;
 
 	@include media('>=desktop') {
-		margin-bottom: 30px;
-	}
-	@include media('>=1500px') {
 		margin-bottom: 40px;
 	}
+	// @include media('>=1500px') {
+	// 	margin-bottom: 40px;
+	// }
 	@include media('>=1700px') {
 		margin-bottom: 60px;
 	}
@@ -152,63 +161,69 @@
     padding-left: 10px;
     margin-bottom: 10px;
 
-    @include media('>=400px') {
-		@include font-size(19);
-    	@include line-height(27);
-	}
+ //    @include media('>=400px') {
+	// 	@include font-size(19);
+ //    	@include line-height(27);
+	// }
 
-    @include media('>=desktop') {
-		@include font-size(18);
-    	@include line-height(24);
-	}
-	@include media('>=1230px') {
-		@include font-size(18);
-	}
-	@include media('>=1500px') {
-		@include font-size(19);
-    	@include line-height(27);
-	}
+ //    @include media('>=desktop') {
+	// 	@include font-size(18);
+ //    	@include line-height(24);
+	// }
+	// @include media('>=1230px') {
+	// 	@include font-size(18);
+	// }
+	// @include media('>=1500px') {
+	// 	@include font-size(19);
+ //    	@include line-height(27);
+	// }
 
-	@include media('>=1700px') {
-		@include font-size(21);
-    	@include line-height(29);
-    	margin-bottom: 20px;
-	}
+	// @include media('>=1700px') {
+	// 	@include font-size(21);
+ //    	@include line-height(29);
+ //    	margin-bottom: 20px;
+	// }
 }
 
 .grid__cta {
 	display: inline-block;
-	background: transparent;
-    border: 2px solid $colour-brightblue;
-    color: $colour-brightblue;
-    padding: 10px 20px;
+	background: $colour-turquoise;
+    border: 2px solid $colour-turquoise;
+    color: $colour-white;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    padding: 9px 15px;
     margin-bottom: $vertical-rhythm;
-    @include font-size(20);
-    border-radius: 3px;
+    @include font-size(16);
+    border-radius: 2px;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-in;
 
     &:hover {
-    	color: $colour-white;
-    	background-color: $colour-brightblue;
+    	color: $colour-real-black;
     }
 
-    @include media('>=400px') {
-    	@include font-size(23);
-    	padding: 15px 25px;
-    }
+ //    @include media('>=400px') {
+ //    	// @include font-size(23);
+ //    	padding: 15px 25px 17px;
+ //    }
 
-    @include media('>=desktop'	) {
-		@include font-size(21);
-	}
+ //    @include media('>=desktop'	) {
+	// 	// @include font-size(21);
+	// }
 
-	@include media('>=1230px') {
-		@include font-size(23);
-	}
+	// @include media('>=1230px') {
+	// 	// @include font-size(23);
+	// }
 
-	@include media('>=1700px') {
-		@include font-size(27);
-		padding: 20px 30px;
-	}
+	// @include media('>=1700px') {
+	// 	// @include font-size(27);
+	// 	padding: 20px 30px 22px;
+	// }
+}
+
+.emphasis {
+	color: $colour-orange;
+	// font-weight: $font-weight-bold;
 }

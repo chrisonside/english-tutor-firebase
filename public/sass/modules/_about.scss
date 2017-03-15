@@ -3,6 +3,19 @@
 	font-size: 0;
 }
 
+.about__title {
+	@include font-size(24);
+    @include line-height(22);
+    font-family: $font-title;
+    font-weight: $font-weight-normal;
+	color: $colour-black;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+
+	 color: $colour-white;
+	 display: none;
+}
+
 /* About bullet points section */
 
 .about__brief {
@@ -18,8 +31,15 @@
 
 	@include media('>=desktop') {
 		display: inline-block;
-		width: 50%;
+		width: 35%;
 		padding: 20px 25px 0;
+
+
+		position: relative;
+		text-align: right;
+		width: 40%;
+		padding: 105px 25px 0;
+		vertical-align: top;
 	}
 }
 
@@ -28,23 +48,23 @@
     @include line-height(22);
     margin-bottom: 30px;
 
-    @include media('>=400px') {
-		@include font-size(18);
-    	@include line-height(24);
-    }
+ //    @include media('>=400px') {
+	// 	@include font-size(18);
+ //    	@include line-height(24);
+ //    }
 
-    @include media('>=500px') {
-    	@include font-size(20);
-    	@include line-height(27);
-    }
-    @include media('>=tablet') {
-    	@include font-size(22);
-    	@include line-height(29);
-    }
-	@include media('>=desktop') {
-		@include font-size(20);
-    	@include line-height(27);
-	}
+ //    @include media('>=500px') {
+ //    	@include font-size(20);
+ //    	@include line-height(27);
+ //    }
+ //    @include media('>=tablet') {
+ //    	@include font-size(22);
+ //    	@include line-height(29);
+ //    }
+	// @include media('>=desktop') {
+	// 	@include font-size(18);
+ //    	@include line-height(27);
+	// }
 }
 
 .about__bullet {
@@ -62,14 +82,18 @@
 	display: inline-block;
 	vertical-align: middle;
 	width: calc(100% - 40px);
+	font-weight: $font-weight-normal;
 }
 
 /* About bio */
 
 .about__bio {
-	background-color: $colour-white;
+	// background-color: $colour-light-grey;
+	// background-color: $colour-white;
+	background-color: $colour-navy;
 	padding: 35px 25px 25px;
-    color: $colour-black;
+    // color: $colour-black;
+    color: $colour-white;
 
     @include media('>=tablet') {
         padding: 50px 25px 25px;
@@ -77,9 +101,15 @@
 
     @include media('>=desktop') {
 		display: inline-block;
-		width: 50%;
+		width: 65%;
 		vertical-align: middle;
-	    padding: 70px 40px 45px;
+	    padding: 70px 70px 45px;
+
+
+
+		vertical-align: top;
+	    width: 60%;
+	    padding: 105px 70px 85px 45px;
     }
     @include media('>=1700px') {
     	padding: 90px 40px 75px;
@@ -91,20 +121,37 @@
     @include line-height(22);
 	margin-bottom: $vertical-rhythm;
 
-	@include media('>=400px') {
-		@include font-size(18);
-    	@include line-height(24);
-    }
-    @include media('>=500px') {
-		@include font-size(19);
-    	@include line-height(26);
-    }
-	@include media('>=tablet') {
-		@include font-size(20);
-    	@include line-height(27);
-	}
-	@include media('>=desktop') {
-		@include font-size(19);
-    	@include line-height(26);
-	}
+	// @include media('>=400px') {
+	// 	@include font-size(18);
+ //    	@include line-height(24);
+ //    }
+ //    @include media('>=500px') {
+	// 	@include font-size(19);
+ //    	@include line-height(26);
+ //    }
+	// @include media('>=tablet') {
+	// 	@include font-size(20);
+ //    	@include line-height(27);
+	// }
+	// @include media('>=desktop') {
+	// 	@include font-size(19);
+ //    	@include line-height(26);
+	// }
+
+	width: 80%;
+}
+
+
+
+
+.about-test {
+	font-family: $font-title;
+	font-size: 25px;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: right;
+    vertical-align: top;
+    width: 70%;
+    position: absolute;
+    right: 0;
 }
