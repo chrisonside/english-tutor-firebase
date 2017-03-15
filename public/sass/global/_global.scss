@@ -20,7 +20,7 @@ body {
     margin: 0 !important;
     @include font-size(18);
     @include line-height(25);
-    background-color: #fff;
+    background-color: $colour-white;
     -webkit-font-smoothing: antialiased;
 
     font-family: $font-primary;

@@ -4,14 +4,18 @@
 *
 **/
 
-$font-lora:'Lora', georgia, serif;
-$font-source-sans-pro: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-// $font-open-sans: 'Open Sans', sans-serif;
+// $font-lora:'Lora', georgia, serif;
+// $font-source-sans-pro: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $font-oxygen: 'Oxygen', Helvetica, Arial, sans-serif;
+// $font-oswald: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-rs: 'Roboto Slab', serif;
+$font-open-sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$font-primary: $font-lora;
-$font-title: $font-source-sans-pro;
+$font-title: $font-rs;
+$font-primary: $font-open-sans;
 
 $font-weight-light: 300;
 $font-weight-normal: 400;
+$font-weight-medium: 500;
 $font-weight-bold: 700;
 $font-weight-bolder: 600;
