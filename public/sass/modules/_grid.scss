@@ -1,0 +1,182 @@
+.grid {
+	font-size: 0;
+	background-color: #ededed;
+}
+
+.grid__flex-container {
+	@include media('>=desktop') {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+}
+
+.grid__item {
+	@include font-size(16);
+	@include line-height(21);
+
+	@include media('>=desktop') {
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+		position: relative;
+
+		
+		/* Create square ratios for both the image and text grid pieces */
+		&--text {
+			width: 50%;
+			height: 0;
+			padding-bottom: 50%;
+		}
+		&--image,
+		&--flex-text {
+			/* http://stackoverflow.com/questions/23717953/padding-bottom-top-in-flexbox-layout/28076430 */
+			&:after {
+				content: '';
+			    /* display: block; */
+			    width: 100%;
+			    height: 0;
+			    padding-bottom: 100%;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			}
+		}
+	}
+}
+
+.grid__image {
+	display: block;
+}
+
+.grid__text-wrapper {
+	@include media('>=desktop') {
+		min-height: 100%; /* Minimum height for modern browsers */
+    	height:100%; /* Minimum height for IE */ 
+    	width:100%;
+    	position:absolute;
+    	overflow:hidden;
+	}
+}
+
+.grid__text {
+	padding: 40px 30px 30px;
+
+	@include media('>=500px') {
+        padding: 40px;
+    }
+	
+	@include media('>=tablet') {
+		padding: 100px 150px 70px;
+	}
+
+	@include media('>=desktop') {
+		position: relative;
+	    top: 50%;
+	    transform: translateY(-50%);
+		width: 100%;
+		padding: 0 40px;
+	}
+	@include media('>=1080px') {
+		padding: 0 40px;
+	}
+	@include media('>=1200px') {
+		padding: 0 90px;
+	}
+	@include media('>=1380px') {
+		padding: 0 120px;
+	}
+	@include media('>=1600px') {
+		padding: 0 160px;
+	}
+	@include media('>=1750px') {
+		padding: 0 200px;
+	}
+
+}
+
+.grid__title {
+	@include font-size(45);
+    @include line-height(45);
+	margin-bottom: 30px;
+	color: $colour-real-black;
+	font-family: $font-title;
+
+	@include media('>=desktop') {
+		margin-bottom: 20px;
+	}
+}
+
+.grid__intro {
+	@include font-size(16);
+    @include line-height(24);
+	margin-bottom: $vertical-rhythm;
+
+	@include media('>=1200px') {
+		@include font-size(17);
+    	@include line-height(24);
+	}
+	@include media('>=1800px') {
+		@include font-size(19);
+    	@include line-height(26);
+	}
+}
+
+.grid__list {
+	margin-bottom: $vertical-rhythm;
+	list-style-type: disc;
+	list-style-position: outside;
+	padding-left: 20px;
+	margin-bottom: 40px;
+
+	@include media('>=desktop') {
+		margin-bottom: 30px;
+	}
+	@include media('>=1200px') {
+		margin-bottom: 40px;
+	}
+}
+
+.grid__list-item {
+	@include font-size(16);
+    @include line-height(23);
+    font-weight: $font-weight-normal;
+    padding-left: 10px;
+    margin-bottom: 10px;
+
+	@include media('>=1200px') {
+		@include font-size(17);
+    	@include line-height(24);
+	}
+	@include media('>=1800px') {
+		@include font-size(19);
+    	@include line-height(26);
+	}
+}
+
+.grid__cta {
+    @include font-size(16);
+    margin-bottom: 40px;
+    padding: 9px 15px;
+	display: inline-block;
+	background: $colour-turquoise;
+    border: 2px solid $colour-turquoise;
+    color: $colour-white;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+    	color: $colour-real-black;
+    }
+
+    @include media('>=desktop') {
+    	margin-bottom: 0;
+    }
+}
+
+.emphasis {
+	color: $colour-orange;
+}

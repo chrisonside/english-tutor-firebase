@@ -1,0 +1,92 @@
+.about {
+	background-color: $colour-navy;
+	font-size: 0;
+}
+
+/* About bullet points section */
+
+.about__brief {
+	position: relative;
+	background-color: $colour-navy;
+	padding: 35px 25px 10px;
+	vertical-align: middle;
+	color: $colour-white;
+
+	@include media('>=500px') {
+		padding: 50px 40px 0px;
+	}
+
+	@include media('>=tablet') {
+		padding: 100px 150px 0px;
+	}
+
+	@include media('>=desktop') {
+		display: inline-block;
+		width: 40%;
+		padding: 115px 25px 0;
+		vertical-align: top;
+		text-align: right;
+	}
+	@include media('>=1600px') {
+		padding: 160px 25px 0;
+	}
+}
+
+.about__slogan {
+	@include font-size(22);
+	@include line-height(26);
+    position: relative;
+    font-family: $font-title;
+	text-transform: uppercase;
+    text-align: left;
+
+    @include media('>=desktop') {
+    	@include font-size(25);
+		@include line-height(30);
+	    width: 70%;
+	    position: absolute;
+	    right: 0;
+	    text-align: right;
+    }
+}
+
+/* About bio */
+
+.about__bio {
+	background-color: $colour-navy;
+	padding: 25px 25px 25px;
+    color: $colour-white;
+
+    @include media('>=500px') {
+    	padding: 25px 40px 25px;
+    }
+
+    @include media('>=tablet') {
+        padding: 25px 150px 85px;
+    }
+
+    @include media('>=desktop') {
+		display: inline-block;
+		vertical-align: top;
+	    width: 60%;
+	    padding: 115px 70px 85px 45px;
+    }
+    @include media('>=1700px') {
+    	padding: 115px 40px 75px;
+    }
+    @include media('>=1600px') {
+    	width: 55%;
+		padding: 160px 100px 115px 50px;
+	}
+
+}
+
+.about__intro {
+	@include font-size(16);
+    @include line-height(22);
+	margin-bottom: $vertical-rhythm;
+
+	@include media('>=desktop') {
+		width: 80%;
+	}
+}
