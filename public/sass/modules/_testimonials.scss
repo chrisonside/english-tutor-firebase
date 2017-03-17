@@ -1,15 +1,14 @@
 .testimonials {
 	position: relative;
 	background-color: $colour-white;
-	// background-color: $colour-white;
-	padding: 40px 25px 15px;
+	padding: 60px 25px 15px;
 	font-size: 0;
 
 	@include media('>=tablet') {
-		padding: 30px 25px 45px;
+		padding: 90px 25px 60px;
 	}
 	@include media('>=desktop') {
-		padding: 100px 25px 60px;
+		padding: 100px 25px 80px;
 	}
 	@include media('>=1500px') {
 		padding: 100px 25px 85px;
@@ -17,137 +16,67 @@
 }
 
 .testimonials__title {
-	@include font-size(45);
-	@include line-height(48);
+	@include font-size(38);
+	@include line-height(42);
 	padding: 0 25px;
 	text-align: center;
 	font-family: $font-title;
 	font-weight: $font-weight-normal;
 	color: $colour-real-black;
-	// max-width: 500px;
-	margin: 0 auto 12px;
+	margin: 0 auto 20px;
 
-	// @include media('>=400px') {
-	// 	@include font-size(40);
-	// 	@include line-height(50);
-	// }
-	// @include media('>=tablet') {
-	// 	max-width: none;
-	// 	// margin-bottom: 70px;
-	// }
-	// @include media('>=1700px') {
-	// 	@include font-size(50);
-	// 	@include line-height(60);
-	// 	// margin-bottom: 80px;
-	// }	
+	@include media('>=400px') {
+		@include font-size(40);
+		@include line-height(50);
+	}
+
+	@include media('>=desktop') {
+		margin-bottom: 15px;
+	}
+	
+	@include media('>=1500px') {
+		@include font-size(50);
+		@include line-height(60);
+	}	
 }
 
 .testimonials__intro {
-	@include font-size(19);
-	@include line-height(24);
+	@include font-size(16);
+	@include line-height(23);
 	color: $colour-real-black;
 	max-width: 500px;
-	margin: 0 auto 40px;
+	margin: 0 auto 20px;
 	text-align: center;
+
+	@include media('>=500px') {
+		@include font-size(19);
+		@include line-height(24);
+		margin: 0 auto 40px;
+	}
 }
 
 .testimonial {
 	@include font-size(15);
-	@include line-height(21);
-	// // padding: 40px 25px 0;
-	padding: 25px;
-	// height: 380px;
-
-	// // margin-bottom: 20px;
+	@include line-height(22);
+	margin-bottom: 30px;
+	padding: 25px 0 0;
 	text-align: center;
 	background-color: $colour-white;
-	margin-bottom: 30px;
+	color: $colour-real-black;
 
-	// border-radius: 20px;
+	@include media('>=400px') {
+		padding: 25px;
+	}
 
 	@include media(">=tablet") {
 		display: inline-block;
 		vertical-align: top;
-		width: 33.333333%;
-		// padding: 40px 40px 0;
-		// @include font-size(17);
-		// @include line-height(24);
-		// margin-bottom: 50px;
+		width: 50%;
+		margin-bottom: 15px;
 	}
 
-	// @include media(">=1200px") {
-	// 	width: 33.333%;
-	// }
-
-	// @include media(">=1500px") {
-	// 	// @include font-size(18);
-	// 	// @include line-height(27);
-	// 	// padding: 40px 60px 0;
-	// 	padding: 40px 60px;
-	// 	// margin-bottom: 80px;
-	// }
-
-	// background-color: #fff;
-	color: #000;
-
-	// &:nth-child(2) {
-	// 	.testimonial__headline {
-	// 		background-color: #efefef;
-	// 		color: black;
-	// 	}
-		
-	// }
-	// &:nth-child(3) {
-	// 	.testimonial__headline {
-	// 		background-color: $colour-navy;
-	// 		color: white;
-	// 	}
-	// }
-	// // &:nth-child(4) {
-	// // 	.testimonial__headline {
-	// // 	background-color: #19bad5;
-	// // 	color: white;
-	// // 	}
-	// // }
-	// &:nth-child(5) {
-	// 	.testimonial__headline {
-	// 		background-color: $colour-navy;
-	// 		color: white;
-	// 	}
-	// }
-	// // &:nth-child(6) {
-	// // 	.testimonial__headline {
-	// // 	background-color: #efefef;
-	// // 	color: black;
-	// // 	}
-	// // }
-	// &:nth-child(7) {
-	// 	.testimonial__headline {
-	// 		background-color: $colour-navy;
-	// 		color: white;
-	// 	}
-	// }
-
-
-	// @include media(">=1700px") {
-	// 	@include font-size(20);
-	// 	@include line-height(28);
-	// }
-
-	&:last-of-type {
-		margin-bottom: none;
-
-		// .testimonial__wrapper {
-		// 	border-bottom: none;
-		// 	padding-bottom: none;
-
-		// 	@include media(">=tablet"){
-		// 		border-bottom: 1px solid #efefef;
-		// 	}
-		// 	@include media(">=desktop"){
-		// 		border-bottom: none;
-		// 	}
-		// }
+	@include media(">=1220px") {
+		width: 33.333333%;
 	}
 }
 
@@ -156,17 +85,20 @@
 	margin: -40px auto 0;
 	border-bottom: 1px solid #efefef;
 	padding-bottom: 45px;
-	padding: 55px 35px 35px;
+	padding: 55px 25px 35px;
 	background-color: $colour-light-grey;
 	border-radius: 20px;
 	filter: drop-shadow(rgba(0, 0, 0, 0.1) 2px 2px 5px);
+
+	@include media(">=500px") {
+		padding: 55px 35px 35px;
+	}
 }
 
 .testimonial__flag-wrapper {
-display: inline-block;	
-margin: 0 auto;
-position: relative;
-// padding: 30px;
+	display: inline-block;	
+	margin: 0 auto;
+	position: relative;
 }
 
 .testimonial__flag {
@@ -174,49 +106,73 @@ position: relative;
 	height: 70px;
 	border-radius: 50%;
 	position: relative;
-	z-index: 2;
-	// margin-bottom: 25px;
+	z-index: $z-index-level-2;
 	border: 2px solid $colour-black;
 	filter: drop-shadow(rgba(60, 85, 109, 0.2) 0px 3px 5px);
-
-	
-	// display: block;
-	// margin: 0 auto 20px;
-
-	// &:after {
-	// content: '';
- //    background: transparent;
- //    border-radius: 80px;
- //    height: 280px;
- //    width: 280px;
- //    animation: pulse 2s ease-out;
- //    animation-iteration-count: infinite;
- //    position: absolute;
- //    top: -15px;
- //    left: -15px;
- //    z-index: 1;
- //    opacity: 0;
- //    background: #fc3;
-	// }
-
 }
 
 .testimonial__pulse {
-	border: 20px solid white;
-    background: transparent;
-    border-radius: 120px;
     height: 110px;
     width: 110px;
 	animation: pulse 4s ease-out;
     animation-iteration-count: infinite;
     position: absolute;
-    opacity: 0;
-    z-index: 1;
-    background: white;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
     top: -20px;
     left: -20px;
+    opacity: 0;
+    z-index: $z-index-level-1;
+    border: 20px solid $colour-white;
+    border-radius: 120px;
+    background: $colour-white;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+}
+
+.testimonial__headline {
+	@include font-size(16);
+	@include line-height(34);
+	display: inline-block;
+	font-family: $font-title;
+	margin-bottom: 20px;
+	color: $colour-white;
+	padding: 0;
+
+	@include media(">=1700px") {
+		@include font-size(25);
+		@include line-height(35);
+	}
+}
+
+.testimonial__highlight {
+    display: inline;
+    padding: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: 15px 0 0 $colour-navy, -15px 0 0 $colour-navy;
+	box-decoration-break: clone;
+	background: $colour-navy;
+    color: $colour-white; 
+}
+
+.testimonial__quote {
+	margin-bottom: 25px;
+}
+
+.testimonial__source {
+	color: $colour-real-black;
+	font-family: $font-title;
+	font-weight: $font-weight-bold;
+}
+
+.testimonial__job {
+	margin-bottom: 5px;
+	color: $colour-orange;
+	font-family: $font-title;
+	font-weight: $font-weight-bold;
+}
+
+.testimonial__company {
+	color: $colour-real-black;
 }
 
 @keyframes pulse {
@@ -241,78 +197,3 @@ position: relative;
 	    opacity: 0.0;
 	}
 }
-
-.testimonial__headline {
-	@include font-size(16);
-	@include line-height(17);
-
-	// @include font-size(16);
-	// @include line-height(24);
-	font-family: $font-title;
-	// font-weight: $font-weight-bold;
-	// text-transform: uppercase;
-	margin-bottom: 20px;
-
-
-	// background-color: $colour-navy;
-			color: white;
-
-	@include media(">=1700px") {
-		@include font-size(25);
-		@include line-height(35);
-	}
-
-	padding: 0;
-    display: inline-block;
-    @include line-height(34);
-
-}
-
-.testimonial__highlight {
-    display: inline;
-    background: $colour-navy;
-    color: $colour-white; 
-    padding: 1rem;
-    padding-left: 0;
-    padding-right: 0;
-    box-shadow: 15px 0 0 $colour-navy, -15px 0 0 $colour-navy;
-	box-decoration-break: clone;
-}
-
-.testimonial__quote {
-	margin-bottom: 25px;
-}
-
-.testimonial__source {
-	color: $colour-real-black;
-	font-family: $font-title;
-	font-weight: $font-weight-bold;
-}
-
-.testimonial__job {
-	margin-bottom: 5px;
-	color: $colour-orange;
-	font-family: $font-title;
-	font-weight: $font-weight-bold;
-}
-
-.testimonial__company {
-	color: $colour-real-black;
-}
-
-.truncate {
-	display: none;
-	@include media(">=desktop") {
-		display: inline;
-	}
-}
-
-// .testimonials__logo {
-//     fill: #004A82;
-//     stroke: none;
-//     height: 103px;
-//     width: 110px;
-//     position: relative;
-//     margin: 0 auto 30px;
-//     display: block;
-// }

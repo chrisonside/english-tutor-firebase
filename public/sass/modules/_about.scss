@@ -3,117 +3,82 @@
 	font-size: 0;
 }
 
-.about__title {
-	@include font-size(24);
-    @include line-height(22);
-    font-family: $font-title;
-    font-weight: $font-weight-normal;
-	color: $colour-black;
-	margin-bottom: 20px;
-	text-transform: uppercase;
-
-	 color: $colour-white;
-	 display: none;
-}
-
 /* About bullet points section */
 
 .about__brief {
+	position: relative;
 	background-color: $colour-navy;
-	color: $colour-white;
 	padding: 35px 25px 10px;
 	vertical-align: middle;
-    text-align: left;
+	color: $colour-white;
 
-    @include media('>=tablet') {
-        padding: 50px 25px 25px;
-    }
+	@include media('>=500px') {
+		padding: 50px 40px 0px;
+	}
+
+	@include media('>=tablet') {
+		padding: 100px 150px 0px;
+	}
 
 	@include media('>=desktop') {
 		display: inline-block;
-		width: 35%;
-		padding: 20px 25px 0;
-
-
-		position: relative;
-		text-align: right;
 		width: 40%;
-		padding: 105px 25px 0;
+		padding: 115px 25px 0;
 		vertical-align: top;
+		text-align: right;
+	}
+	@include media('>=1600px') {
+		padding: 160px 25px 0;
 	}
 }
 
-.about__keypoint {
-	@include font-size(16);
-    @include line-height(22);
-    margin-bottom: 30px;
+.about__slogan {
+	@include font-size(22);
+	@include line-height(26);
+    position: relative;
+    font-family: $font-title;
+	text-transform: uppercase;
+    text-align: left;
 
- //    @include media('>=400px') {
-	// 	@include font-size(18);
- //    	@include line-height(24);
- //    }
-
- //    @include media('>=500px') {
- //    	@include font-size(20);
- //    	@include line-height(27);
- //    }
- //    @include media('>=tablet') {
- //    	@include font-size(22);
- //    	@include line-height(29);
- //    }
-	// @include media('>=desktop') {
-	// 	@include font-size(18);
- //    	@include line-height(27);
-	// }
-}
-
-.about__bullet {
-	@include font-size(20);
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 10px;
-	height: 30px;
-    width: 23px;
-	stroke: white;
-    fill: none;
-}
-
-.about__bullet-text {
-	display: inline-block;
-	vertical-align: middle;
-	width: calc(100% - 40px);
-	font-weight: $font-weight-normal;
+    @include media('>=desktop') {
+    	@include font-size(25);
+		@include line-height(30);
+	    width: 70%;
+	    position: absolute;
+	    right: 0;
+	    text-align: right;
+    }
 }
 
 /* About bio */
 
 .about__bio {
-	// background-color: $colour-light-grey;
-	// background-color: $colour-white;
 	background-color: $colour-navy;
-	padding: 35px 25px 25px;
-    // color: $colour-black;
+	padding: 25px 25px 25px;
     color: $colour-white;
 
+    @include media('>=500px') {
+    	padding: 25px 40px 25px;
+    }
+
     @include media('>=tablet') {
-        padding: 50px 25px 25px;
+        padding: 25px 150px 85px;
     }
 
     @include media('>=desktop') {
 		display: inline-block;
-		width: 65%;
-		vertical-align: middle;
-	    padding: 70px 70px 45px;
-
-
-
 		vertical-align: top;
 	    width: 60%;
-	    padding: 105px 70px 85px 45px;
+	    padding: 115px 70px 85px 45px;
     }
     @include media('>=1700px') {
-    	padding: 90px 40px 75px;
+    	padding: 115px 40px 75px;
     }
+    @include media('>=1600px') {
+    	width: 55%;
+		padding: 160px 100px 115px 50px;
+	}
+
 }
 
 .about__intro {
@@ -121,37 +86,7 @@
     @include line-height(22);
 	margin-bottom: $vertical-rhythm;
 
-	// @include media('>=400px') {
-	// 	@include font-size(18);
- //    	@include line-height(24);
- //    }
- //    @include media('>=500px') {
-	// 	@include font-size(19);
- //    	@include line-height(26);
- //    }
-	// @include media('>=tablet') {
-	// 	@include font-size(20);
- //    	@include line-height(27);
-	// }
-	// @include media('>=desktop') {
-	// 	@include font-size(19);
- //    	@include line-height(26);
-	// }
-
-	width: 80%;
-}
-
-
-
-
-.about-test {
-	font-family: $font-title;
-	font-size: 25px;
-    line-height: 30px;
-    text-transform: uppercase;
-    text-align: right;
-    vertical-align: top;
-    width: 70%;
-    position: absolute;
-    right: 0;
+	@include media('>=desktop') {
+		width: 80%;
+	}
 }
